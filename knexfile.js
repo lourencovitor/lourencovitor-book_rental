@@ -1,12 +1,12 @@
-// Update with your config settings.
+require("dotenv/config");
 
 module.exports = {
   development: {
-    client: "mysql",
+    client: process.env.DB_DIALECT,
     connection: {
-      user: "root",
-      password: "positivo20",
-      database: "book_rental_test",
+      user: process.env.DB_USER,
+      password: process.env.DB_PASS,
+      database: process.env.DB_NAME,
     },
     migrations: {
       tableName: "knex_migrations",
