@@ -248,7 +248,7 @@ Rota feita para criarmos um usuários
 
 body : name, birth_date, cpf, email, address, password
 
-obs: para criar um usuários com permissões de administrador é só adicionar o campo role com o valor 1, pois por default se criar o usuario sem mandar o campo role o usuários será role 2 
+obs: para criar um usuários com permissões de administrador é só adicionar o campo role_id com o valor 1, pois por default se criar o usuario sem mandar o campo role o usuários será role_id com o valor 2 
 
 ```
 {
@@ -265,7 +265,7 @@ obs: para criar um usuários com permissões de administrador é só adicionar o
 		"number":92
 	},
 	"password": "teste123"
-	"role": 1
+	"role_id": 1
 }
 ```
 
