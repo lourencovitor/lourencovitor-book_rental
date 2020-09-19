@@ -12,8 +12,13 @@ module.exports = {
   async store(req, res, next) {
     try {
       const { name } = req.body;
-      await knex("roles").insert({ name });
-      return res.status(201).send();
+      if (name) {
+        await knex("roles").insert({ name });
+        return res.status(201).send();
+      }
+      return res
+        .status(400)
+        .json({ message: "the name field cannot be empty" });
     } catch (error) {
       next(error);
     }

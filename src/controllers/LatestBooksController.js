@@ -10,7 +10,6 @@ module.exports = {
       const new_array = rentals.map((element) => {
         let month_rental = new Date(element.return_date);
         month_rental = month_rental.getMonth() + 1;
-        // console.log(element.delivery_date, element.return_date);
         if (element.delivery_date > element.return_date) {
           return {
             month_rental,

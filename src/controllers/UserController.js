@@ -18,7 +18,15 @@ module.exports = {
           "addresses.number as address_number"
         )
         .where({ "users.deleted_at": null });
-      return res.json(users);
+
+      const new_users = users.map((user) => {
+        delete user.password;
+        return {
+          ...user,
+        };
+      });
+
+      return res.json(new_users);
     } catch (error) {
       next(error);
     }
@@ -76,6 +84,7 @@ module.exports = {
           "addresses.number as address_number"
         )
         .where({ "users.deleted_at": null });
+      delete role[0].password;
       return res.json(role);
     } catch (error) {
       next(error);

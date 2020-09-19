@@ -10,13 +10,13 @@ const DeliveryController = require("./controllers/DeliveryController");
 const LatestBooksController = require("./controllers/LatestBooksController");
 const AdminAuth = require("./middleware/AdminAuth");
 
-routes.post("/login", AuthController.store);
+routes.post("/auth", AuthController.store);
 
-routes.get("/roles", RoleController.index);
-routes.post("/roles", RoleController.store);
-routes.get("/roles/:id", RoleController.show);
-routes.put("/roles/:id", RoleController.update);
-routes.delete("/roles/:id", RoleController.destroy);
+routes.get("/roles", AdminAuth, RoleController.index);
+routes.post("/roles", AdminAuth, RoleController.store);
+routes.get("/roles/:id", AdminAuth, RoleController.show);
+routes.put("/roles/:id", AdminAuth, RoleController.update);
+routes.delete("/roles/:id", AdminAuth, RoleController.destroy);
 
 routes.get("/users", AdminAuth, UserController.index);
 routes.post("/users", UserController.store);
