@@ -1174,7 +1174,7 @@ Exemplo de erro:
 }
 ```
 
-### GET /rent_control
+### GET /latest_books
 
 Esse endpoint é responsável por retornar a listagem de todos os registro de aluguel de livros.
 
