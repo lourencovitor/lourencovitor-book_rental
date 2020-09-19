@@ -3,9 +3,10 @@ const knex = require("../database");
 module.exports = {
   async store(req, res, next) {
     try {
-      const { user_id, delivery_date } = req.body;
+      const { user_id, copie_id, delivery_date } = req.body;
       const rent_controls = await knex("rent_controls")
         .where({ user_id })
+        .where({ copie_id })
         .where({ deleted_at: null });
       if (rent_controls) {
         const date_delivery_date = new Date(delivery_date);

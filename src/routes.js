@@ -7,6 +7,7 @@ const BookController = require("./controllers/BookController");
 const CopieController = require("./controllers/CopieController");
 const RentalControlController = require("./controllers/RentalControlController");
 const DeliveryController = require("./controllers/DeliveryController");
+const LatestBooksController = require("./controllers/LatestBooksController");
 const AdminAuth = require("./middleware/AdminAuth");
 
 routes.post("/login", AuthController.store);
@@ -42,5 +43,7 @@ routes.put("/rent_control/:id", AdminAuth, RentalControlController.update);
 routes.delete("/rent_control/:id", AdminAuth, RentalControlController.destroy);
 
 routes.post("/delivery", AdminAuth, DeliveryController.store);
+
+routes.get("/latest_books", AdminAuth, LatestBooksController.index);
 
 module.exports = routes;

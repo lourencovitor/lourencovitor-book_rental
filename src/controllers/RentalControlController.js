@@ -3,7 +3,7 @@ const knex = require("../database");
 module.exports = {
   async index(req, res, next) {
     try {
-      const copies = await knex("rent_controls")
+      const retal = await knex("rent_controls")
         .join("users", "users.id", "=", "rent_controls.user_id")
         .join("copies", "copies.id", "=", "rent_controls.copie_id")
         .join("books", "books.id", "=", "copies.book_id")
@@ -18,7 +18,7 @@ module.exports = {
           "books.author as book_author"
         )
         .where({ "rent_controls.deleted_at": null });
-      return res.json(copies);
+      return res.json(retal);
     } catch (error) {
       next(error);
     }
