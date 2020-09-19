@@ -18,6 +18,7 @@ exports.up = function (knex) {
     table.date("birth_date");
     table.string("cpf");
     table.string("password");
+    table.integer("penalties").defaultTo(0);
     table.unique(["cpf"]);
 
     table.timestamp("created_at").defaultTo(knex.fn.now());

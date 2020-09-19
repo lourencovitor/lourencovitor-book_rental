@@ -14,13 +14,12 @@ module.exports = function (req, res, next) {
         next();
       } else {
         res.status(401);
-        res.json({ message: "You are not allowed to see this data" });
+        return res.json({ message: "You are not allowed to see this data" });
       }
-    } catch (err) {
-      res.status(401);
+    } catch (error) {
+      next(error);
     }
   } else {
-    res.status(401);
-    return;
+    return res.status(401);
   }
 };
