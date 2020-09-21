@@ -98,7 +98,7 @@ Nenhum
 
 ##### OK ! 200
 
-Caso essa resposta aconteça você vai receber a listagem de todos os games.
+Caso essa resposta aconteça você vai receber a listagem de todos as roles.
 
 Exemplo de resposta:
 
@@ -145,7 +145,7 @@ params: id
 
 ##### OK ! 200
 
-Caso essa resposta aconteça você vai receber a listagem de todos os games.
+Caso essa resposta aconteça você vai receber os dados representantes ao id passado por parametro.
 
 Exemplo de resposta:
 
@@ -298,7 +298,7 @@ Nenhum
 
 ##### OK ! 200
 
-Caso essa resposta aconteça você vai receber a listagem de todos os games.
+Caso essa resposta aconteça você vai receber a listagem de todos os users.
 
 Exemplo de resposta:
 
@@ -370,7 +370,7 @@ params: id
 
 ##### OK ! 200
 
-Caso essa resposta aconteça você vai receber a listagem de todos os games.
+Caso essa resposta aconteça você vai receber os dados do user representado pelo id do parametro.
 
 Exemplo de resposta:
 
@@ -574,7 +574,7 @@ Nenhum
 
 ##### OK ! 200
 
-Caso essa resposta aconteça você vai receber a listagem de todos os games.
+Caso essa resposta aconteça você vai receber a listagem de todos os books.
 
 Exemplo de resposta:
 
@@ -627,7 +627,7 @@ Exemplo de erro:
 }
 ```
 
-### GET /users/id
+### GET /books/id
 
 Esse endpoint é responsável por retornar somente o user representado pelo id passado pelo parametro.
 
@@ -639,7 +639,7 @@ params: id
 
 ##### OK ! 200
 
-Caso essa resposta aconteça você vai receber a listagem de todos os games.
+Caso essa resposta aconteça você vai receber os dados do books representado pelo id do parametro.
 
 Exemplo de resposta:
 
@@ -773,7 +773,7 @@ Nenhum
 
 ##### OK ! 200
 
-Caso essa resposta aconteça você vai receber a listagem de todos os games.
+Caso essa resposta aconteça você vai receber a listagem de todas as copies.
 
 Exemplo de resposta:
 
@@ -828,7 +828,7 @@ params: id
 
 ##### OK ! 200
 
-Caso essa resposta aconteça você vai receber a listagem de todos os games.
+Caso essa resposta aconteça você vai receber os dados da copie representado pelo id do parametro.
 
 Exemplo de resposta:
 
@@ -975,7 +975,7 @@ Nenhum
 
 ##### OK ! 200
 
-Caso essa resposta aconteça você vai receber a listagem de todos os games.
+Caso essa resposta aconteça você vai receber a listagem de todos os rent_control.
 
 Exemplo de resposta:
 
@@ -1044,7 +1044,7 @@ params: id
 
 ##### OK ! 200
 
-Caso essa resposta aconteça você vai receber a listagem de todos os games.
+Caso essa resposta aconteça você vai receber os dados do rent_control representado pelo id do parametro.
 
 Exemplo de resposta:
 
@@ -1189,7 +1189,7 @@ Nenhum
 
 ##### OK ! 200
 
-Caso essa resposta aconteça você vai receber a listagem de todos os games.
+Caso essa resposta aconteça você vai receber a listagem de todos os latest_books.
 
 Exemplo de resposta:
 
