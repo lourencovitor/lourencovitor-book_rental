@@ -26,7 +26,10 @@ Api feita com o intuito de ser um sistema de controle de aluguel de livros em um
 
 ## Inicializando a aplicação 🏁
 
-obs: Quem tiver utilizando npm pode seguir usando os comandos inicializados com npx, banco de dados utilizado foi o MySQL
+obs: Quem tiver utilizando npm pode seguir usando os comandos inicializados com npx, banco de dados utilizado foi o MySQL.
+Caso estejam utilizando outro banco de dados é só alterar a configuração como segue a documentação do <a href="http://knexjs.org/">knex</a>.
+Se você não possuir um banco de dados sugiro instalar o <a href="https://www.mysql.com/">Mysql</a> ou subir um container utilizando docker como esse exemplo 
+<a href="https://github.com/mysql/mysql-docker">Docker com Mysql</a>
 
 1° Crie um arquivo .env, copie todas as informações do arquivo .env.example para o .env e preecha-o antes de iniciar.
 
